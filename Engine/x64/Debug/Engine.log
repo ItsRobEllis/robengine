@@ -1,0 +1,9 @@
+﻿  Stdafx.cpp
+  Main.cpp
+  Core.cpp
+  Generating Code...
+Core.obj : error LNK2019: unresolved external symbol __imp_glClear referenced in function "public: int __cdecl Core::Update(void)" (?Update@Core@@QEAAHXZ)
+Core.obj : error LNK2019: unresolved external symbol __imp_glClearColor referenced in function "public: int __cdecl Core::Update(void)" (?Update@Core@@QEAAHXZ)
+Core.obj : error LNK2019: unresolved external symbol glewInit referenced in function "public: int __cdecl Core::Init(void)" (?Init@Core@@QEAAHXZ)
+Core.obj : error LNK2001: unresolved external symbol glewExperimental
+A:\Projects\C++\Year 3\Game Engine Programming\Engine\x64\Debug\Engine.exe : fatal error LNK1120: 4 unresolved externals
