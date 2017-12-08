@@ -1,7 +1,8 @@
 # Visual Studio
-/build/
-/build_intermediary/
+build/
 ipch/
+x64/
+Engine.VC.db
 *.aps
 *.ncb
 *.opendb
