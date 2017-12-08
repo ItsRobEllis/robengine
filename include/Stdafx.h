@@ -12,8 +12,10 @@
 #include <conio.h>
 #include <iomanip>
 #include <iostream>
+#include <memory>
 #include <time.h>
 #include <string>
+#include <vector>
 #include <Windows.h>
 
 // SDL & glew
@@ -22,5 +24,11 @@
 
 // Class Headers
 #include "Core.h"
+#include "Entity.h"
+
+// Components
+#include "Camera.h"
+#include "Component.h"
+#include "Transform.h"
 
 #endif

@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Gfx">
+      <UniqueIdentifier>{c8d4b8d0-04f3-490a-82df-3c95ff337090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gfx">
+      <UniqueIdentifier>{844b6729-c569-4338-8e8b-d7f619656c70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{03d4b8c7-5a8b-4657-bd6b-252a4c8cb300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{de1b186f-39b3-481d-9638-6d9c4078dc6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Core.cpp">
@@ -21,10 +33,22 @@
     <ClCompile Include="..\src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Stdafx.cpp">
+    <ClCompile Include="..\src\glew.c">
+      <Filter>Source Files\Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\glew.c">
+    <ClCompile Include="..\src\Component.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Transform.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Camera.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,11 +59,23 @@
     <ClInclude Include="..\include\Stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\wglew.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\glew.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\wglew.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\include\Component.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Transform.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Camera.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
