@@ -25,6 +25,7 @@
 // SDL & glew
 #include "SDL.h"
 #include "glew.h"
+#include "glm\vec3.hpp"
 
 // Class Headers
 #include "Core.h"

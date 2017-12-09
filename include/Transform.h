@@ -26,27 +26,33 @@ namespace RobEng
     void Start();
     
     // To change the position of the component
-    void SetPosition(float _x, float _y, float _z) { m_positionX = _x; m_positionY = _y, m_positionZ = _z; }
+    void WorldPosition(float _x, float _y, float _z) { m_worldPosition = { _x, _y, _z }; }
 
     // To change the rotation of the component
-    void SetRotation(float _x, float _y, float _z) { m_rotationX = _x; m_rotationY = _y, m_rotationZ = _z; }
+    void WorldRotation(float _x, float _y, float _z) { m_worldRotation = { _x, _y, _z }; }
 
     // To set the scale of the component
-    void SetScale(float _sc) { m_scale = _sc; }
+    void WorldScale(float _sc) { m_scale = _sc; }
+
+    // Fetch the position of the component
+    glm::vec3 WorldPosition(void) { return m_worldPosition; };
+
+    // Fetch the rotation of the component
+    glm::vec3 WorldRotation(void) { return m_worldRotation; };
+
+    // Fetch the scale of the component
+    float WorldScale(void) { return m_scale; };
 
   protected:
 
   private:
     // Position of the entity
-    float m_positionX,
-          m_positionY,
-          m_positionZ;
+    glm::vec3 m_worldPosition;
 
     // Rotation of the entity
-    float m_rotationX,
-          m_rotationY,
-          m_rotationZ;
+    glm::vec3 m_worldRotation;
 
+    // The scale of the entity
     float m_scale;
   };
 }
