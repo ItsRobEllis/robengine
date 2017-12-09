@@ -10,13 +10,7 @@
 
 namespace RobEng
 {
-  Camera::Camera()
-  {
+  Camera::Camera() {}
 
-  }
-
-  Camera::~Camera()
-  {
-
-  }
+  Camera::~Camera() {}
 }

@@ -16,11 +16,11 @@ namespace RobEng
   class Camera : public Component
   {
   public:
-    // Constructors
+    // Constructor
     Camera();
-
-    // Destructors
+    // Destructor
     ~Camera();
+
   protected:
 
   private:
