@@ -21,10 +21,15 @@ namespace RobEng
 
     // Destructors
     ~Transform();
+
+    void Start();
+
   protected:
 
   private:
-
+    float _X,
+          _Y,
+          _Z;
   };
 }
 

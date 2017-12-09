@@ -1,6 +1,10 @@
-// Game Engine Programming Assignment
-// By Rob Ellis
-// Bournemouth University
+/**
+  * Core is the main class of the application, containing the main loop, as well as startup and closing functions.
+  * It also contains a logging function for debugging, as well as variables such as the screen resolution and SDL and OpenGL variables
+  * @file: Core.h
+  * @author: Rob Ellis
+  * @date: 03/11/2017
+  */
 
 // Precompiled Header
 #include "Stdafx.h"
@@ -14,6 +18,8 @@ Core::Core(void)
 	m_finished = false;
 	m_console = GetStdHandle(STD_OUTPUT_HANDLE);
 }
+
+// Pssst. https://learnopengl.com/
 
 // Main Destructor
 // For the most part, cleanup of variables is done in Exit()
@@ -153,7 +159,7 @@ int Core::Exit(void)
  * - Display the message with a type, using TYPE _msgType, which is one of 'UNDEFINED', 'STANDARD', 'WARN' or 'SEVERE'
  * While this may work on other operating systems, it is primarily designed for debugging on Windows
 */
-void Core::logMsg(TYPE _msgType, std::string _msgBody)
+void Core::logMsg(std::string _msgBody, TYPE _msgType)
 {
 	time(&m_rawtime);
 	m_timer = localtime(&m_rawtime);

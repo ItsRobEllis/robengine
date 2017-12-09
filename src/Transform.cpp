@@ -10,13 +10,14 @@
 
 namespace RobEng
 {
-  Transform::Transform()
+  Transform::Transform() {}
+
+  Transform::~Transform() {}
+
+  void Transform::Start()
   {
-
-  }
-
-  Transform::~Transform()
-  {
-
+    _X = 0;
+    _Y = 0;
+    _Z = 0;
   }
 }

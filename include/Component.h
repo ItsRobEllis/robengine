@@ -22,14 +22,14 @@ namespace RobEng
     ~Component();
 
     // Component Functions
-    void Awake();   // Awake
-    void Start();   // Start
-    void Update();  // Update
-    void Render();  // Render
-    void Destroy(); // Destroy
+    virtual void Awake();   // Awake
+    virtual void Start();   // Start
+    virtual void Update();  // Update
+    virtual void Render();  // Render
+    virtual void Destroy(); // Destroy
 
     // This is the entity the component is attached to
-    std::shared_ptr<Entity> m_attachedEntity;
+    std::weak_ptr<Entity> m_attachedEntity;
 
   protected:
 

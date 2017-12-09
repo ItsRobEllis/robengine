@@ -1,6 +1,10 @@
-// Game Engine Programming Assignment
-// By Rob Ellis
-// Bournemouth University
+/**
+  * Stdafx is a precompiled header file.
+  * This contains all header files included in the solution, as well as system and required external libraries
+  * @file: Stdafx.h
+  * @author: Rob Ellis
+  * @date: 27/11/2017
+  */
 
 #ifndef _STDAFX_H_
 #define _STDAFX_H_

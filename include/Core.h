@@ -1,9 +1,13 @@
-// Game Engine Programming Assignment
-// By Rob Ellis
-// Bournemouth University
-
 #ifndef _CORE_H_
 #define _CORE_H_
+
+/**
+  * Core is the main class of the application, containing the main loop, as well as startup and closing functions.
+  * It also contains a logging function for debugging, as well as variables such as the screen resolution and SDL and OpenGL variables
+  * @file: Core.h
+  * @author: Rob Ellis
+  * @date: 03/11/2017
+  */
 
 // Precompiled Header
 #include "Stdafx.h"
@@ -24,7 +28,7 @@ public:
 	time_t getRawTime() { return m_rawtime; };
 
 	// Functions
-	void logMsg(TYPE _msgType, std::string _msgBody);
+	void logMsg(std::string _msgBody, TYPE _msgType);
 	void logMsg(std::string _msgBody);
 	int Launch(void);
 	int Init(void);
