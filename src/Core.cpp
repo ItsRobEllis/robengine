@@ -19,8 +19,6 @@ Core::Core(void)
 	m_console = GetStdHandle(STD_OUTPUT_HANDLE);
 }
 
-// Pssst. https://learnopengl.com/
-
 // Main Destructor
 // For the most part, cleanup of variables is done in Exit()
 Core::~Core(void) { }
@@ -62,7 +60,7 @@ int Core::Init(void)
 	logMsg("Initialising SDL");
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
-		logMsg(SEVERE, "Failed to initialise SDL: " + std::string(SDL_GetError()));
+		logMsg("Failed to initialise SDL: " + std::string(SDL_GetError()), SEVERE);
 		return RET_ERROR;
 	}
 	logMsg("Creating Window");
@@ -76,7 +74,7 @@ int Core::Init(void)
 	);
 	if (m_window == NULL)
 	{
-		logMsg(SEVERE, "Failed to initialise window: " + std::string(SDL_GetError()));
+		logMsg("Failed to initialise window: " + std::string(SDL_GetError()), SEVERE);
 		return RET_ERROR;
 	}
 

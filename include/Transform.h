@@ -22,38 +22,49 @@ namespace RobEng
     // Destructors
     ~Transform();
     
-    // Start function to assign default location for all transform components
+    // Overflow start function to assign default location for all transform components
     void Start();
-    
-    // To change the position of the component
-    void WorldPosition(float _x, float _y, float _z) { m_worldPosition = { _x, _y, _z }; }
 
-    // To change the rotation of the component
-    void WorldRotation(float _x, float _y, float _z) { m_worldRotation = { _x, _y, _z }; }
+    // Overflow destroy function
+    void Destroy();
 
-    // To set the scale of the component
-    void WorldScale(float _sc) { m_scale = _sc; }
+    // Function to move the component
+    void Translate(glm::vec3 _translation);
 
-    // Fetch the position of the component
-    glm::vec3 WorldPosition(void) { return m_worldPosition; };
+    // Function to rotate the component
+    void Rotate(glm::vec3 _rotation);
 
-    // Fetch the rotation of the component
-    glm::vec3 WorldRotation(void) { return m_worldRotation; };
+    // To change the local position of the component
+    void LocalPosition(glm::vec3 _newPosition);
+    // To change the local rotation of the component
+    void LocalRotation(glm::vec3 _newRotation);
+    // To set the local scale of the component
+    void LocalScale(glm::vec3 _newScale);
 
-    // Fetch the scale of the component
-    float WorldScale(void) { return m_scale; };
+    // Fetch the local position of the component
+    glm::vec3 LocalPosition(void) { return m_localPosition; };
+    // Fetch the local rotation of the component
+    glm::vec3 LocalRotation(void) { return m_localRotation; };
+    // Fetch the local scale of the component
+    glm::vec3 LocalScale(void)    { return m_localScale; };
+
+    // Defines the parent of this transform component
+    void SetParent(std::weak_ptr<Transform> _parent) { m_parent = _parent; }
+    // Fetch the parent
+    std::weak_ptr<Transform> GetParent(void) { return m_parent; }
 
   protected:
 
   private:
-    // Position of the entity
-    glm::vec3 m_worldPosition;
+    // Local position of the transform component
+    glm::vec3 m_localPosition;
+    // Local rotation of the transform component
+    glm::vec3 m_localRotation;   
+    // Local scale of the entity
+    glm::vec3 m_localScale;
 
-    // Rotation of the entity
-    glm::vec3 m_worldRotation;
-
-    // The scale of the entity
-    float m_scale;
+    // Store a parent if a parent exists
+    std::weak_ptr<Transform> m_parent;
   };
 }
 

@@ -16,7 +16,7 @@
 namespace RobEng
 {
   class Component; // Forward declaring Component.h
-  class Entity 
+  class Entity : public std::enable_shared_from_this<Entity>
   {
   public:
     // Constructor and init function
@@ -46,7 +46,7 @@ namespace RobEng
   public:
     // Getting a component from the entity
     template<class _T>
-    static std::weak_ptr<_T> getComponent()
+    std::weak_ptr<_T> getComponent()
     {
       for (size_t i = 0; i < m_entityComponents.size(); i++)
       {
@@ -65,12 +65,12 @@ namespace RobEng
 
     // Adding a component to the entity
     template<class _T>
-    static std::weak_ptr<_T> addComponent()
+    std::weak_ptr<_T> addComponent()
     {
-      std::shared_ptr c = new _T();
+      std::shared_ptr<_T> c = std::make_shared<_T>();
 
       m_entityComponents.push_back(c);
-      c->m_attachedEntity = this;
+      c->m_attachedEntity = shared_from_this();
       c->Awake();
 
       return c;
