@@ -13,4 +13,9 @@ namespace RobEng
   Camera::Camera() {}
 
   Camera::~Camera() {}
+  
+  void Camera::Start()
+  {
+
+  }
 }

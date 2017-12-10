@@ -12,6 +12,10 @@
 // Class Header
 #include "Core.h"
 
+// Define Static Variables
+int Core::s_screenWidth = 1240;
+int Core::s_screenHeight = 768;
+
 // Main Constructor
 Core::Core(void)
 {

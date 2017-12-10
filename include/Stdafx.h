@@ -22,19 +22,25 @@
 #include <vector>
 #include <Windows.h>
 
-// SDL & glew
+// SDL & Glew
 #include "SDL.h"
 #include "glew.h"
+
+// GLM
 #include "glm\vec3.hpp"
 #include "glm\mat4x4.hpp"
+#include "glm\gtc\matrix_transform.hpp"
 
 // Class Headers
 #include "Core.h"
 #include "Entity.h"
+#include "Mesh.h"
+#include "Shader.h"
 
 // Components
 #include "Camera.h"
 #include "Component.h"
+#include "Material.h"
 #include "Transform.h"
 
 #endif

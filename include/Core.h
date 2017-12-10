@@ -35,10 +35,15 @@ public:
 	int Update(void);
 	int Exit(void);
 
+  // Getters for Screen Width/Height
+  static int getScreenWidth(void) { return s_screenWidth; }
+  static int getScreenHeight(void) { return s_screenHeight; }
+  static float getAspectRatio(void) { return (float)(s_screenWidth / s_screenHeight); }
+
 private:
 	// Window
-	const int s_screenWidth = 1280;
-	const int s_screenHeight = 900;
+	static int s_screenWidth;
+  static int s_screenHeight;
 
 	// SDL
 	SDL_Window *m_window;
