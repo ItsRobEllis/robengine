@@ -51,7 +51,7 @@ namespace RobEng
       for (size_t i = 0; i < m_entityComponents.size(); i++)
       {
         // Create a variable c that compares component type at index i against _T and stores the result
-        std::weak_ptr<_T> c = std::dynamic_pointer_cast<_T>(components.at(i));
+        std::weak_ptr<_T> c = std::dynamic_pointer_cast<_T>(m_entityComponents.at(i));
 
         // After defining c, see if it is still valid
         if (!c.expired())

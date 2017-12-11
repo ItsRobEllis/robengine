@@ -13,6 +13,8 @@
 
 namespace RobEng
 {
+  class Entity;
+  class Camera;
   class Transform : public Component
   {
   public:

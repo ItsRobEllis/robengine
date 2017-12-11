@@ -14,11 +14,13 @@
 
 // System Includes
 #include <conio.h>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <memory>
 #include <time.h>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <Windows.h>
 
@@ -29,18 +31,18 @@
 // GLM
 #include "glm\vec3.hpp"
 #include "glm\mat4x4.hpp"
+#include "glm\gtc\type_ptr.hpp"
 #include "glm\gtc\matrix_transform.hpp"
 
 // Class Headers
 #include "Core.h"
 #include "Entity.h"
+#include "Material.h"
 #include "Mesh.h"
-#include "Shader.h"
 
 // Components
-#include "Camera.h"
 #include "Component.h"
-#include "Material.h"
 #include "Transform.h"
+#include "Camera.h"
 
 #endif
