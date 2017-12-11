@@ -29,6 +29,8 @@ namespace RobEng
     // Requires shaders
     void DrawMesh();
 
+    int GetVerts(void) { return _vertexCount; }
+
   protected:
 
   private:

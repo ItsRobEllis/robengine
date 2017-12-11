@@ -42,6 +42,7 @@
 
 // Components
 #include "Component.h"
+#include "MeshRenderer.h"
 #include "Transform.h"
 #include "Camera.h"
 

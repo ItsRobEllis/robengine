@@ -28,8 +28,6 @@ namespace RobEng
     // This is the entity the component is attached to
     std::weak_ptr<Entity> m_attachedEntity;
 
-  protected:
-
   private:
     glm::vec3 m_cameraTarget;
     glm::mat4 m_projection = glm::perspective(glm::radians(75.0f), Core::getAspectRatio(), 0.01f, 1000.0f);

@@ -171,7 +171,7 @@
     <ClCompile Include="..\src\Main.cpp" />
     <ClCompile Include="..\src\Material.cpp" />
     <ClCompile Include="..\src\Mesh.cpp" />
-    <ClCompile Include="..\src\Shader.cpp" />
+    <ClCompile Include="..\src\MeshRenderer.cpp" />
     <ClCompile Include="..\src\Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -188,10 +188,14 @@
     <ClInclude Include="..\include\glew.h" />
     <ClInclude Include="..\include\Material.h" />
     <ClInclude Include="..\include\Mesh.h" />
-    <ClInclude Include="..\include\Shader.h" />
+    <ClInclude Include="..\include\MeshRenderer.h" />
     <ClInclude Include="..\include\Stdafx.h" />
     <ClInclude Include="..\include\Transform.h" />
     <ClInclude Include="..\include\wglew.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\resources\shaders\FragShader.txt" />
+    <Text Include="..\resources\shaders\VertShader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

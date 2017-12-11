@@ -50,12 +50,13 @@ namespace RobEng
     // Fetch the local scale of the component
     glm::vec3 LocalScale(void)    { return m_localScale; };
 
+    // Calculate a transformation matrix with given position, rotation and scale vectors
+    glm::mat4 TransformationMatrix(glm::vec3 _translation, glm::vec3 _rotation, glm::vec3 _scale);
+
     // Defines the parent of this transform component
     void SetParent(std::weak_ptr<Transform> _parent) { m_parent = _parent; }
     // Fetch the parent
     std::weak_ptr<Transform> GetParent(void) { return m_parent; }
-
-  protected:
 
   private:
     // Local position of the transform component

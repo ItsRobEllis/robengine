@@ -37,7 +37,6 @@ namespace RobEng
     // Clean up everything here
   }
 
-
   bool Material::LoadShaders(std::string _vertFilename, std::string _fragFilename)
   {
     std::weak_ptr<Core> m_core;
@@ -168,7 +167,6 @@ namespace RobEng
 
       return false;
     }
-
 
     // We will define matrices which we will send to the shader
     // To do this we need to retrieve the locations of the shader's matrix uniform variables

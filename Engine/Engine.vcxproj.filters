@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{de1b186f-39b3-481d-9638-6d9c4078dc6a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Models">
+      <UniqueIdentifier>{3c88271c-c0fa-41d2-b987-1dab72e5042a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{35dfd2f8-ea77-45db-a5a4-bf5a890abf84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Core.cpp">
@@ -54,11 +60,11 @@
     <ClCompile Include="..\src\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Shader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Material.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MeshRenderer.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,11 +95,19 @@
     <ClInclude Include="..\include\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\Material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\MeshRenderer.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\resources\shaders\FragShader.txt">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
+    <Text Include="..\resources\shaders\VertShader.txt">
+      <Filter>Resource Files\Shaders</Filter>
+    </Text>
   </ItemGroup>
 </Project>

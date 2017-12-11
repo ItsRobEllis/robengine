@@ -77,4 +77,26 @@ namespace RobEng
   {
     m_localScale = _newScale;
   }
+
+  glm::mat4 Transform::TransformationMatrix(glm::vec3 _translation, glm::vec3 _rotation, glm::vec3 _scale)
+  {
+    // Create a Matrix4 to store the result
+    glm::mat4 _result;
+
+    // Apply the translation
+    _result = glm::translate(_result, _translation);
+
+    // Apply the rotation Y
+    _result = glm::rotate(_result, _rotation.y, glm::vec3(0.f, 1.f, 0.f));
+    // Apply the rotation Z
+    _result = glm::rotate(_result, _rotation.z, glm::vec3(0.f, 0.f, 1.f));
+    // Apply the rotation X
+    _result = glm::rotate(_result, _rotation.x, glm::vec3(1.f, 0.f, 0.f));
+
+    // Apply the scale
+    _result = glm::scale(_result, _scale);
+
+    // Return the transformation matrix
+    return _result;
+  }
 }

@@ -1,6 +1,7 @@
 # Visual Studio
 build/
 build_intermediary/
+doc/
 ipch/
 x64/
 Engine.VC.db

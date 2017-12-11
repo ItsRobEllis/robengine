@@ -27,8 +27,6 @@ namespace RobEng
     ~Entity();
     void Destroy();
    
-  protected:
-
   private:
     // The name of the entity
     std::string m_entityName;

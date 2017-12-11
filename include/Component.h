@@ -30,11 +30,6 @@ namespace RobEng
 
     // This is the entity the component is attached to
     std::weak_ptr<Entity> m_attachedEntity;
-
-  protected:
-
-  private:
-
   };
 }
 

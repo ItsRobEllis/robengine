@@ -58,8 +58,19 @@ int Core::Launch(void)
 // This function leads onto the Update() function when completed
 int Core::Init(void)
 {
-	SetConsoleTitle(TEXT("Debug Console"));	// Debug Console Window Title
+  // Hide console so the SDL window appears first on the taskbar
+  ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+
+	SetConsoleTitle(TEXT("RobEngine Debug Console"));	// Debug Console Window Title
 	SetConsoleTextAttribute(getConsole(), 15); // Sets the colour of the console text to white, operating systems outside of Windows should ignore this
+
+  std::cout <<
+    "d8888b.   .d88b.   d8888b.  d88888b  d8b   db   d888b   d888888b  d8b   db  d88888b\n" <<
+    "88  `8D  .8P  Y8.  88  `8D  88'      888o  88  88' Y8b    `88'    888o  88  88'    \n" <<
+    "88oobY'  88    88  88oooY'  88ooooo  88V8o 88  88          88     88V8o 88  88ooooo\n" <<
+    "88`8b    88    88  88~~~b.  88~~~~~  88  V8o8  88  ooo     88     88 V8o88  88~~~~~\n" << 
+    "88 `88.  `8b  d8'  88   8D  88.      88  V888  88. ~8~    .88.    88  V888  88.    \n" <<
+    "88   YD   `Y88P'   Y8888P'  Y88888P  VP   V8P   Y888P   Y888888P  VP   V8P  Y88888P  v0.01 \n\n";
 
 	logMsg("Initialising SDL");
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
@@ -82,6 +93,19 @@ int Core::Init(void)
 		return RET_ERROR;
 	}
 
+  // Load BMP for window icon
+  SDL_Surface *_picture = SDL_LoadBMP("../resources/textures/icon.bmp");
+  // Consider all magenta on the image to be transparent and filter it out
+  SDL_SetColorKey(_picture, SDL_TRUE, SDL_MapRGB(_picture->format, 255, 0, 255));
+  // Set the icon to the icon
+  SDL_SetWindowIcon(m_window, _picture);
+
+  // Now the window exists, we can show the console again
+  ::ShowWindow(::GetConsoleWindow(), SW_SHOW);
+
+  // Now the console is back, set the sdl window as the main focus again
+  SDL_RaiseWindow(m_window);
+  
 	logMsg("Creating Renderer");
 	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);
